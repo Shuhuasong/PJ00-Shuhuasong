@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid</title>
+  <style>
+  #container {
+    display: grid;
+    background: LightGreen;
+    grid-template-areas: "header header "
+                         "content sidebar"
+                         "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows:  1fr 3fr 1fr;
+    grid-gap: 10px;
+
+  }
+  .item {
+    background: lightcoral;
+    /* padding: 30px; */
+    height: 60px;
+  }
+
+   .item1 {
+      background: lightblue;
+      /* grid-row-start: row-start;
+      grid-row-end: row-end 4;
+      grid-column-start: col-start;
+      grid-column-end: col-end 2;  /*span 2 columns */
+      /* grid-row: 2/4;
+      grid-column: 3/5; */
+      /* grid-area: 2/3/span 3/5; */
+      justify-self: center;
+      align-self: center;
+
+   }
+
+   header {
+     grid-row: header;
+     grid-column: header;
+   }
+
+   main {
+     grid-row: content;
+     grid-column: content;
+     display: grid;
+     grip-gap: 5px;
+     /* grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(1fr); */
+     height: 1200px;
+     /* justify-items: center;  /* end(start): layout the item at the end of row(start); */
+     /*align-items: center; */
+   }
+   aside {
+     grid-row; sidebar;
+     grid-column: sidebar;
+   }
+   footer {
+     grid-row: footer;
+     grid-column: footer;
+   }
+
+   header, main, aside, footer {
+     border: 1px dashed;
+   }
+
+  </style>
+</head>
+<body>
+
+  <!-- Model -->
+  <div class="model fade"  id="modal"> <!-- make the transition smoothly -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+           <h5>Sign up for exclusive!</h5>
+           <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        </div>
+
+        <div class="modal-body">
+          <form action="">
+            <div class="form-group">
+              <label for="nameInput">Your name</label>
+              <input type="text" class="form-control" id="nameInptut" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Your email</label>
+              <input type="email" class="form-control" id="emailInptut" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="address">Your address</label>
+              <textarea class="form-group" name="" id="address"  rows="3" placeholder="Enter your address"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer justify-content-between">
+           <div class="form-check form-check-inline">
+             <input type="checkbox" class="form-check-input" id="emailCheck" value="option1">
+             <labe class="form-check-label" form="emailCheck">Contact by email</labe>
+           </div>
+           <div class="form-check form-check-inline">
+             <input type="checkbox" class="form-check-input" id="postCheck" value="option1">
+             <labe class="form-check-label" form="postCheck">Contact by Post</labe>
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+  font-family: monospace;
+}
+
+
+.col-md-4 > img {
+  width: 140px;
+  height: 140px;
+}
+
+img{
+  max-width: 100%;
+}
